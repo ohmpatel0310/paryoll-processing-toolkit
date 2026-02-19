@@ -27,3 +27,18 @@ function calculateTaxes(grossPay) {
     return grossPay - tax
 }
 
+// Step 6: Writing processPayroll
+
+function processPayroll(employee) {
+    let basePay = calculateBasePay(employee.hourlyRate, employee.hoursWorked)
+    let overtimePay = calculateOvertimePay(employee.hourlyRate, employee.hoursWorked)
+    let grossPay = basePay + overtimePay
+    let netPay = calculateTaxes(grossPay)
+    return {
+        name: employee.name,
+        basePay: basePay,
+        overtimePay: overtimePay,
+        grossPay: grossPay,
+        netPay: netPay
+    }
+}
