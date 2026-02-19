@@ -5,3 +5,10 @@ let employees = [
     {name: "Bimbom", hourlyRate: 25, hoursWorked: 35},
     {name: "Jimjom", hourlyRate: 30, hoursWorked: 45}
 ]
+
+// Step 3: Writing calculateBasePay Function
+
+function calculateBasePay(rate, hours) {
+    let baseHours = hours > 40 ? 40: hours;
+    return rate * baseHours;
+}
