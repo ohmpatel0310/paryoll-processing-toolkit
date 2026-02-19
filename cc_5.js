@@ -9,14 +9,21 @@ let employees = [
 // Step 3: Writing calculateBasePay Function
 
 function calculateBasePay(rate, hours) {
-    let baseHours = hours > 40 ? 40: hours;
-    return rate * baseHours;
+    let baseHours = hours > 40 ? 40: hours
+    return rate * baseHours
 }
 
 // Step 4: Writing calculateOvertimePay Function
 
 function calculateOvertimePay(rate, hours){
-    let overtimeHours = hours > 40 ? hours - 40: 0;
+    let overtimeHours = hours > 40 ? hours - 40: 0
     return (rate * 1.5) * overtimeHours
+}
+
+// Step 5: Writing calculateTaxes Function
+
+function calculateTaxes(grossPay) {
+    let tax = grossPay * 0.15
+    return grossPay - tax
 }
 
