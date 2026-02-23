@@ -42,3 +42,11 @@ function processPayroll(employee) {
         netPay: netPay
     }
 }
+
+// Step 7: Looping through employee array and log payroll object
+
+console.log("Final Payroll Report")
+employees.forEach(employee => {
+    let report = processPayroll(employee)
+    console.log(report)
+})
